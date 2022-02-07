@@ -35,7 +35,7 @@ public class ServletConfiguration implements WebMvcConfigurer {
             registry.addResourceHandler(pattern).addResourceLocations("/static/");
         }
     }
-    
+
     @Bean
     public ServletRegistrationBean<Servlet> cxfServletBean() {
         return new ServletRegistrationBean<>(new org.apache.cxf.transport.servlet.CXFServlet(), "/ws/*");
